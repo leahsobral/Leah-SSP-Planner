@@ -1,0 +1,204 @@
+/*CSS deals with the style and 'customization' of the code. This in my opinion is the most fun part of coding, because I can add colors, change formats, etc. to make it look as appealing as possible. To write notes that don't affect the code, you open the comment by using a slack and astrix, and close the comment with typing an astrix then slash.*/
+#container { /* This is a container for the various singular boxes that are supposed to hold different tasks. This is a larger container that has many variables included inside of it.*/
+  margin-top: 0px; /*the space inbetween the margin on the top. This makes sure the data inside the container won't shift outside of the parameters I have given.*/
+  margin-left: 0px;
+  width: 100vw; /* size of the big box*/
+  height: 50vh; /* notice how line 4 says vw; the type of measurement tool is important as vw and vh are associated with different parts of the measurement, but all overall influence the size of the big box*/
+  display: flex; /*this means that you can control the dimensions of the items in that one dimension, or control the spacing between items.*/
+  justify-content: flex-start; /*this makes the items in each list start from the fluid starting point which is the left, then continues to the right. This also signifies that it will continue to the right of the page even if there is another item so it is not necessarilly in normal list form. The items needed to accomplish can now be read as a book.*/
+  flex-wrap: wrap; /*The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.*/
+  align-items: baseline; /*The align-items property defines the default behavior for how items are laid out along the cross axis. This means that the items in the list will be listed on the baseline*/
+}
+a {color:#E8ECEB
+   /*  This changes the color of the box itself*/
+}
+.menu{ /*The menu is the top bar where you can read to do. This is it's own box and makes it a lot easier to assess whats in this 'tool bar'.*/
+  background-color:#2D3E4E;
+  display: flex;
+  padding: 15px; /*the padding changes the size of the box, so the inside of the box gets padded depending on how many px I put inside.*/
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  list-style-type: none; /*this makes sure the list isn't automatically associated with a list style, like bullet points, or anything else.*/
+  justify-content: center; /*This centers all of the content so it doesn't fall either to the left or right of the page. */
+  font-size:40px; /*This will change the font size. */
+  font-family: "Courier New", monospace; /*Font-family changes the style, if you are familiar with google docs when you change the size or font family it has similar dimensions and types. I avidly use "Courier New" when writing essays. */
+}
+
+.port{ /* This changes the background of the whole page */
+  background-color: #8CBDB9;
+}
+
+li { /*this assesses each part of the list in each of the boxes*/
+  display: inline-block;
+  margin:10px;
+  padding:25px;
+  text-transform:uppercase; /*changes the font to be automatically uppercase*/
+}
+
+*{ /*this affects the entire code*/
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+.wrapper{
+  background: #fff;
+  max-width: 1000px;
+  width: 40%;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1); /*this makes the box's shadow very slightly darker so it looks like it pops out of the page*/
+  float: left; /*this means that the box will float to the left*/
+  
+}
+
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600px; /* font weight in comparison to font size influences the boldness of the text, instead of the size overall*/
+}
+
+.wrapper .titleObject{
+  margin: 20px 0;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  /* all of the influences the size of the box */
+}
+.titleObject input{
+  width: 100%;
+  outline: none;
+  font-size:20px;
+  border-radius:1px;
+  border: 1px solid rgb(255, 255, 255); /*there are different ways to assesss color, this is one of a few examples to express white*/
+  transition: all 0.3s ease /*this transitions the color of the input to white removing the text originally shown*/
+}
+
+.wrapper .inputField{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input{
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc; /* changes the border color */
+  font-size: 17px;
+  padding-left: 15px; /*adds extra padding to the left so the text drifts more to the right */
+  transition: all 0.3s ease;
+}
+.inputField input:focus{
+  border-color: #2D3E4E;
+}
+
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #2D3E4E;
+  cursor: pointer; /*changes the curser to pointer */
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.inputField button.active{
+  opacity: 5;
+  pointer-events: auto;
+}
+
+.wrapper .todoList{
+  max-height: 250px;
+  overflow-y: auto; /* really important - makes sure that the text doesn't overflow off of the box, so as such in influences the y, which is the height to stretch out the box so there is no overflow. */
+}
+.todoList li{
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: default;
+  overflow: hidden; /*The overflow is no longer visibly stretched, so you can see the all of the text if you scroll down inside the box. This keeps the page more organized. */
+  word-wrap: break-word;
+}
+.todoList li .icon{
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%); /*changes the position based on y which is top to bottom */
+  background: #2D3E4E;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon{
+  left: 0px; 
+}
+.wrapper .ptContainer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.ptContainer button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  user-select: none;
+  opacity:5;
+  pointer-events: none;
+
+}
+.ptContainer button.active{
+  opacity: 5;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.footer{ /*The footer makes sure you can't scroll down forever, it just stops once you have reached to a certain extent of visible boxes. */
+  position: absolute;
+  bottom: 0;
+}
+
+.footer button{
+  align-items: right;
+}
+
+.addMoreBoxes button{
+  padding:30px 40px; /*this changes colors of border*/
+  border: 150px;
+  border-radius: 150px; /*this and the one above affect the shape of the box - it is a circle right now*/
+  border-color: #8CBDB9;
+  color: #2D3E4E;
+  font-size: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 50px;
+/*is to align with other box*/
+}
+
+.ending{
+  position: absolute;
+  bottom: 0;
+  height:-30%;
+  width:100%;
+  align-items: center;
+}
