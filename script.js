@@ -1,3 +1,4 @@
+//JavaScript allows webpages to be interactive
 let counter = 0
 //This counter will eventually continuously change, but the starting value for the variable will be 0
 let container = document.getElementById("container")
